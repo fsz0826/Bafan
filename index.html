@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #ddd;
+    }
+
+    * {
+        box-sizing: border-box;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    @keyframes x {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+
+    }
+
+    #八卦 {
+
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+        animation: x 7s infinite linear;
+        box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.75);
+    }
+
+    /* 当页面小于500px时，八卦换一套长宽 */
+    @media (max-width: 500px) {
+        #八卦 {
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    #八卦>div:first-child {
+
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        background-color: black;
+    }
+
+    #八卦>div:nth-child(2) {
+
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        background-color: white;
+    }
+
+    #八卦>div:nth-child(3) {
+        /* border: 10px solid red; */
+        width: 50%;
+        height: 50%;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        margin-left: -25%;
+        background-color: black;
+    }
+
+    #八卦>div:nth-child(4) {
+        /* border: 10px solid green; */
+        width: 50%;
+        height: 50%;
+        border-radius: 50%;
+        position: absolute;
+        right: 50%;
+        bottom: 0px;
+        margin-right: -25%;
+        background-color: white;
+    }
+
+    #八卦>div:nth-child(5) {
+        width: 12.5%;
+        height: 12.5%;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        margin-left: -6.25%;
+        top: 18.75%;
+        background-color: white;
+    }
+
+    #八卦>div:nth-child(6) {
+        width: 12.5%;
+        height: 12.5%;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        margin-left: -6.25%;
+        bottom: 18.75%;
+        background-color: black;
+    }
+
+    #八卦-wrapper {
+
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #比企谷八幡 {
+        margin-top: 1em;
+
+        /* em表示一个字的宽度约16px */
+    }
+</style>
+
+<body>
+    <div id="八卦-wrapper">
+        <div id="八卦">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="比企谷八幡">
+            游荡的孤傲灵魂不需要羁绊之地
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
